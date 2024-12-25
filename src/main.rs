@@ -1,5 +1,14 @@
-mod day4;
+use std::time::Instant;
+mod day5;
 
 fn main() {
-    day4::main()
+    let now = Instant::now();
+
+    {
+        day5::main();
+    }
+
+    let elapsed = now.elapsed();
+
+    println!("Elapsed: {:.2?}", elapsed);
 }
