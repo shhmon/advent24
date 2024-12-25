@@ -1,11 +1,12 @@
 use std::time::Instant;
-mod day5;
+mod day6;
+mod utils;
 
 fn main() {
     let now = Instant::now();
 
     {
-        day5::main();
+        day6::main();
     }
 
     let elapsed = now.elapsed();

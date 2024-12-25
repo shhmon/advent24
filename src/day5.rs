@@ -1,23 +1,11 @@
-use std::fs;
-use std::io;
-
 #[derive(Debug)]
 struct Rule {
     before: i32,
     after: i32,
 }
 
-fn read_file() -> Result<String, io::Error> {
-    let content = match fs::read_to_string("./d5.txt") {
-        Ok(content) => content,
-        Err(e) => return Err(e),
-    };
-
-    return Ok(content);
-}
-
 fn parse_file() -> (Vec<Rule>, Vec<Vec<i32>>) {
-    let input = read_file().unwrap();
+    let input = read_file("./d5.txt").unwrap();
 
     let mut rules = vec![];
     let mut updates = vec![];
